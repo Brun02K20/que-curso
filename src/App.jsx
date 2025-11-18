@@ -12,6 +12,8 @@ import { Home } from "./pages/Home.jsx";
 import { FAQ } from "./pages/FAQ.jsx";
 import { Material } from "./pages/Material.jsx";
 import { SendFeedBack } from "./pages/SendFeedBack.jsx";
+import { Calendar } from "./pages/Calendar.jsx";
+import { Notas } from "./pages/Notas.jsx";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/material" element={<Material />}></Route>
         <Route path="/materias/" element={<MateriasDisplay />}></Route>
         <Route path="/sendFeedback" element={<SendFeedBack />}></Route>
+        <Route path="/calendario" element={<Calendar />}></Route>
+        <Route path="/notas" element={<Notas />}></Route>
         <Route path="/*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />

@@ -224,14 +224,14 @@ export const MateriasDisplay = () => {
             <button
               className="text-decoration-underline fw-bold btn"
               onClick={() => {
-                actualizarAnio(rango(0, 9));
+                actualizarAnio(rango(0, 8));
               }}
             >
               {"("}Actualizar todo primero{")"}
             </button>
           </p>
           <div className="row">
-            {datosMaterias.slice(0, 9).map((x, index) => (
+            {datosMaterias.slice(0, 8).map((x, index) => (
               <button
                 disabled={false}
                 className={getStyle(x.estado)}
@@ -250,14 +250,14 @@ export const MateriasDisplay = () => {
             <button
               className="text-decoration-underline fw-bold btn"
               onClick={() => {
-                actualizarAnio(rango(9, 17));
+                actualizarAnio(rango(8, 17));
               }}
             >
               {"("}Actualizar todo segundo{")"}
             </button>
           </p>
           <div className="row">
-            {datosMaterias.slice(9, 17).map((x, index) => (
+            {datosMaterias.slice(8, 17).map((x, index) => (
               <button
                 disabled={false}
                 className={getStyle(x.estado)}

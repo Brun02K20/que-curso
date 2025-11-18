@@ -1,0 +1,238 @@
+/* Estilos para la página de Notas */
+
+.notas-page {
+  min-height: calc(100vh - 200px);
+}
+
+/* Lista de materias */
+.subject-list-item {
+  transition: all 0.2s ease;
+  border-left: 4px solid transparent;
+}
+
+.subject-list-item:hover {
+  background-color: #f8f9fa;
+  border-left-color: #007bff;
+  transform: translateX(5px);
+}
+
+/* Inputs de notas */
+.nota-input {
+  max-width: 120px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.nota-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Detalle de materia */
+.subject-detail {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tabla de resumen */
+.grades-summary-table {
+  font-size: 0.9rem;
+  min-width: 1000px;
+}
+
+.grades-summary-table th,
+.grades-summary-table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px 8px;
+}
+
+.grades-summary-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.grades-summary-table .sticky-col {
+  position: sticky;
+  left: 0;
+  z-index: 5;
+  background-color: #f8f9fa;
+  text-align: left;
+  min-width: 200px;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grades-summary-table thead .sticky-col {
+  z-index: 15;
+}
+
+/* Colores para estados de notas */
+.table-success {
+  background-color: #d4edda !important;
+}
+
+.table-warning {
+  background-color: #fff3cd !important;
+}
+
+.table-danger {
+  background-color: #f8d7da !important;
+}
+
+/* Cards de secciones */
+.subject-detail .card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subject-detail .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Badges personalizados */
+.badge {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  font-weight: 500;
+}
+
+/* Nav tabs */
+.nav-tabs {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.nav-tabs .nav-link {
+  color: #6c757d;
+  font-weight: 500;
+  border: none;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: transparent;
+  background-color: #f8f9fa;
+}
+
+.nav-tabs .nav-link.active {
+  color: #007bff;
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom-color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nota-input {
+    max-width: 80px;
+    font-size: 0.875rem;
+  }
+
+  .grades-summary-table {
+    font-size: 0.75rem;
+  }
+
+  .grades-summary-table th,
+  .grades-summary-table td {
+    padding: 8px 4px;
+  }
+
+  .grades-summary-table .sticky-col {
+    min-width: 120px;
+    max-width: 150px;
+    font-size: 0.8rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group .btn {
+    border-radius: 0.25rem !important;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .subject-list-item {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .subject-list-item .btn-group {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .subject-list-item .btn-group .btn {
+    flex: 1;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+/* Animaciones de transición */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+/* Alertas personalizadas */
+.alert-info {
+  border-left: 4px solid #0dcaf0;
+}
+
+/* Scrollbar personalizada para tablas */
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

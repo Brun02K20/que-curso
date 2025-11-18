@@ -36,6 +36,16 @@ export const Header = () => {
               FAQ
             </Nav.Link>
           </Nav.Item>
+          <Nav.Item className="header-item">
+            <Nav.Link className="header-link" onClick={() => navigate("/calendario")}>
+              Calendario
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item className="header-item">
+            <Nav.Link className="header-link" onClick={() => navigate("/notas")}>
+              Notas
+            </Nav.Link>
+          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

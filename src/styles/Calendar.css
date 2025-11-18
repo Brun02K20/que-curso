@@ -1,0 +1,216 @@
+/* Estilos para el Calendario */
+
+.calendar-page {
+  min-height: calc(100vh - 200px);
+}
+
+.calendar-container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.calendar-header h3 {
+  margin: 0;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.weekday {
+  text-align: center;
+  font-weight: 600;
+  padding: 10px;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-day {
+  min-height: 100px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+  position: relative;
+}
+
+.calendar-day:hover {
+  background: #f8f9fa;
+  border-color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.15);
+}
+
+.calendar-day.empty {
+  background: #f8f9fa;
+  cursor: default;
+  border-color: #e9ecef;
+}
+
+.calendar-day.empty:hover {
+  background: #f8f9fa;
+  transform: none;
+  box-shadow: none;
+}
+
+.calendar-day.today {
+  background: #e7f3ff;
+  border-color: #007bff;
+  font-weight: 600;
+}
+
+.calendar-day.today .day-number {
+  color: #007bff;
+}
+
+.day-number {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.activities-indicator {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 5px;
+}
+
+.activity-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.activity-dot.parcial {
+  background-color: #dc3545;
+}
+
+.activity-dot.exposicion {
+  background-color: #ffc107;
+}
+
+.activity-dot.trabajo {
+  background-color: #17a2b8;
+}
+
+.activity-dot.tpi {
+  background-color: #28a745;
+}
+
+/* Estilos para la sección de actividades del día */
+.day-activities-section {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.upcoming-activities {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming-activities h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calendar-day {
+    min-height: 80px;
+    padding: 5px;
+  }
+
+  .day-number {
+    font-size: 0.85rem;
+  }
+
+  .weekday {
+    font-size: 0.75rem;
+    padding: 5px;
+  }
+
+  .calendar-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .activity-dot {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .calendar-day {
+    min-height: 60px;
+    padding: 3px;
+  }
+
+  .day-number {
+    font-size: 0.75rem;
+  }
+
+  .calendar-header {
+    flex-wrap: wrap;
+  }
+
+  .weekday {
+    font-size: 0.65rem;
+  }
+}
+
+/* Estilos para el modal */
+.modal-header {
+  border-bottom: 2px solid #007bff;
+}
+
+.modal-body .text-muted i {
+  color: #007bff;
+}
+
+/* Badges */
+.badge {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
